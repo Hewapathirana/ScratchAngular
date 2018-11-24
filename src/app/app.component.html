@@ -1,9 +1,22 @@
 
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+
+  <ul><li *ngFor="let i of arr">{{i}}</li></ul>
+  <p *ngIf="istrue">Show</p>
+  <p *ngIf="name== 'abc'">Ok</p>
+  <p *ngIf="istrue; else firstTemp">Show Again</p>
+  <ng-template #firstTemp>This is firstTEmp</ng-template> <br>
 
   <a routerLink="/mem">Member</a>
   <a routerLink="/pro">Product</a>
  <br>
   <router-outlet></router-outlet>
+
+  <div class="itemlist">
+    <h1 id="item"> Item List</h1>
+    <div class="add">
+      <input type="text" placeholder="Add Item"><button id="additem">ADD</button>
+    </div>
+    <ul>
+      <li *ngFor="let itemshow of itemList">{{itemshow}} <span>x</span></li>
+    </ul>
+  </div>

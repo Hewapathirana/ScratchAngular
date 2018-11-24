@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tutorial';
+
+
+  obj = {
+    id: '1',
+    name: 'das'
+  };
+
+  arr = ['abc', 'def', 'hihi'];
+  istrue = false;
+
+  name = 'abc';
+
+  itemList = ['Angular 4', 'React', 'JSf', 'React Native'];
+
+
+
+
+
+
 }
