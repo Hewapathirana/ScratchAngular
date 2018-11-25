@@ -16,12 +16,21 @@ export class AppComponent {
   arr = ['abc', 'def', 'hihi'];
   istrue = false;
 
-  name = 'abc';
+  name = '';
 
   itemList = ['Angular 4', 'React', 'JSf', 'React Native'];
 
+  pushToItemList = function() {
+    if (this.name != '') {
+      this.itemList.push(this.name);
+      this. name = '';
+    }
+  };
 
+  deleteItemList = function (index) {
+    this.itemList.splice(index, 1);
 
+  };
 
 
 

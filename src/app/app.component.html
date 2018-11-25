@@ -1,6 +1,5 @@
 
-
-  <ul><li *ngFor="let i of arr">{{i}}</li></ul>
+ <ul><li *ngFor="let i of arr">{{i}}</li></ul>
   <p *ngIf="istrue">Show</p>
   <p *ngIf="name== 'abc'">Ok</p>
   <p *ngIf="istrue; else firstTemp">Show Again</p>
@@ -14,9 +13,10 @@
   <div class="itemlist">
     <h1 id="item"> Item List</h1>
     <div class="add">
-      <input type="text" placeholder="Add Item"><button id="additem">ADD</button>
+      <input [(ngModel)]="name" type="text"  placeholder="Add Item" >
+      <button (click)="pushToItemList()" id="additem" >ADD</button>
     </div>
     <ul>
-      <li *ngFor="let itemshow of itemList">{{itemshow}} <span>x</span></li>
+      <li *ngFor="let itemshow of itemList; let ind = index">{{itemshow}} <span (click)="deleteItemList(ind)">x</span></li>
     </ul>
   </div>
