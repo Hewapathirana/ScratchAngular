@@ -20,3 +20,8 @@
       <li *ngFor="let itemshow of itemList; let ind = index">{{itemshow}} <span (click)="deleteItemList(ind)">x</span></li>
     </ul>
   </div>
+
+
+ <h2>{{school | uppercase}}</h2>
+ <h3>{{day}}</h3>
+ <h3>{{day | date | uppercase}}</h3>

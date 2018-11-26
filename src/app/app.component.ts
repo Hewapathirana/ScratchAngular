@@ -6,19 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-
   obj = {
     id: '1',
     name: 'das'
   };
-
   arr = ['abc', 'def', 'hihi'];
   istrue = false;
-
   name = '';
-
   itemList = ['Angular 4', 'React', 'JSf', 'React Native'];
+  school = 'Isipathana';
+  day = new Date();
 
   pushToItemList = function() {
     if (this.name != '') {
@@ -31,7 +28,5 @@ export class AppComponent {
     this.itemList.splice(index, 1);
 
   };
-
-
 
 }
