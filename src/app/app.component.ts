@@ -17,6 +17,7 @@ export class AppComponent {
   school = 'Isipathana';
   day = new Date();
 
+
   pushToItemList = function() {
     if (this.name != '') {
       this.itemList.push(this.name);
@@ -28,5 +29,9 @@ export class AppComponent {
     this.itemList.splice(index, 1);
 
   };
+
+  ConvertToInt(val) {
+    return parseInt(val);
+  }
 
 }

@@ -34,3 +34,13 @@ li{
   margin-right: 50px;
 }
 
+
+#addnum1num2{
+  margin: auto;
+  background-color: coral;
+  width: 400px;
+  margin: auto;
+  border: 3px solid green;
+  padding: 10px;
+}
+

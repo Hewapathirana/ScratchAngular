@@ -25,3 +25,12 @@
  <h2>{{school | uppercase}}</h2>
  <h3>{{day}}</h3>
  <h3>{{day | date | uppercase}}</h3>
+
+ <div class="container" id="addnum1num2">
+ <div class="jumbotron">
+   <input [(ngModel)]="num1" type="text" class="form-control" placeholder="NUMBER ONE"><br>
+   <input [(ngModel)]="num2" type="text" class="form-control" placeholder="NUMBER TWO">
+   <p>The sum is: {{ (ConvertToInt(num1)   + ConvertToInt(num2)) || "0" }}</p>
+   <!--<input [(ngModel)]="sum" type="text" placeholder="NUMBER ONE"><br>-->
+ </div>
+ </div>
