@@ -25,7 +25,10 @@
  <h2>{{school | uppercase}}</h2>
  <h3>{{day}}</h3>
  <h3>{{day | date | uppercase}}</h3>
-
+ <h3>{{day | date:'shortDate'}}</h3>
+ <h3>{{day | date:'fullDate'}}</h3>
+ <p>{{shortarr |shortarray : 'asc'}}</p>
+ <p>{{shortarr |shortarray : 'dsc'}}</p>
  <div class="container" id="addnum1num2">
  <div class="jumbotron">
    <input [(ngModel)]="num1" type="text" class="form-control" placeholder="NUMBER ONE"><br>

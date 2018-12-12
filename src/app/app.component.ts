@@ -16,7 +16,7 @@ export class AppComponent {
   itemList = ['Angular 4', 'React', 'JSf', 'React Native'];
   school = 'Isipathana';
   day = new Date();
-
+  shortarr = [4, 2, 8, 9, 7, 6];
 
   pushToItemList = function() {
     if (this.name != '') {
