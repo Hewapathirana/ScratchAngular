@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup , FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
   school = 'Isipathana';
   day = new Date();
   shortarr = [4, 2, 8, 9, 7, 6];
-
+  form;
   pushToItemList = function() {
     if (this.name != '') {
       this.itemList.push(this.name);
@@ -30,9 +31,20 @@ export class AppComponent {
 
   };
 
-  ConvertToInt(val) {
+  ConvertToInt = function(val) {
     return parseInt(val);
+  };
+
+  ngOnInit () {
+    this.form = new FormGroup({
+      lastname: new FormControl('Dasitha'),
+      firstname: new FormControl(' '),
+      lanuage: new FormControl(''),
+    });
   }
+
+
+
 
 
   onSubmit = function (user) {

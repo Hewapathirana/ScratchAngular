@@ -64,3 +64,28 @@
    </form>
  </div>
  <!--Template driven forms finished-->
+ <br>
+ <hr>
+ <!-- model driven From started-->
+ <div class="container" id="addnum1num4">
+   <form   [formGroup] = 'form' (ngSubmit) = "onSubmit(form.value)">
+     <div class="form-group">
+       <label for="lan">Last Name:</label>
+       <input type="text" class="form-control" id="lanm" placeholder="Last Name" name="lastname" formControlName="lastname">
+     </div>
+     <div class="form-group">
+       <label for="fnm">First Name:</label>
+       <input type="text" class="form-control" id="fnmm" placeholder="First Name" name="firstname" formControlName="firstname">
+     </div>
+     <div class="form-group">
+       <label for="sel1">Select list:</label>
+       <select class="form-control" id="sel1m" name="lanuage" formControlName="lanuage">
+         <option value="java">JAVA</option>
+         <option value="angular">ANGULAR</option>
+         <option value="react">REACT</option>
+       </select>
+     </div>
+     <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+   </form>
+ </div>
+ <!--model driven forms finished-->
