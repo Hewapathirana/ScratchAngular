@@ -34,4 +34,10 @@ export class AppComponent {
     return parseInt(val);
   }
 
+
+  onSubmit = function (user) {
+    console.log(user);
+
+  };
+
 }

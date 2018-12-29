@@ -37,3 +37,30 @@
    <!--<input [(ngModel)]="sum" type="text" placeholder="NUMBER ONE"><br>-->
  </div>
  </div>
+        <br>
+   <hr>
+
+
+   <!-- Template driven From started-->
+ <div class="container" id="addnum1num3">
+   <form   #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm.value)">
+     <div class="form-group">
+       <label for="lan">Last Name:</label>
+       <input type="text" class="form-control" id="lan" placeholder="Last Name" name="lastname" ngModel>
+     </div>
+     <div class="form-group">
+       <label for="fnm">First Name:</label>
+       <input type="text" class="form-control" id="fnm" placeholder="First Name" name="firstname" ngModel>
+     </div>
+     <div class="form-group">
+       <label for="sel1">Select list:</label>
+       <select class="form-control" id="sel1" name="lanuage" ngModel>
+         <option value="java">JAVA</option>
+         <option value="angular">ANGULAR</option>
+         <option value="react">REACT</option>
+       </select>
+     </div>
+     <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+   </form>
+ </div>
+ <!--Template driven forms finished-->
