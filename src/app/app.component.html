@@ -85,7 +85,7 @@
          <option value="react">REACT</option>
        </select>
      </div>
-     <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+     <button type="submit"  [disabled]="!form.valid" class="btn btn-primary" value="submit" >Submit</button>
    </form>
  </div>
  <!--model driven forms finished-->

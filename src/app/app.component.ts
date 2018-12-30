@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup , FormControl} from '@angular/forms';
+import {FormGroup , FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -37,10 +37,18 @@ export class AppComponent {
 
   ngOnInit () {
     this.form = new FormGroup({
-      lastname: new FormControl('Dasitha'),
-      firstname: new FormControl(' '),
+      lastname: new FormControl('' , Validators.compose([Validators.required,
+      Validators.minLength(3),
+      Validators.pattern('[\\w\\-\\s\\/]+')]) ),
+      firstname: new FormControl(' ', this.textValidator),
       lanuage: new FormControl(''),
     });
+  }
+
+  textValidator(control){
+    if(control.value.length<3){
+      return {'firstname': true};
+    }
   }
 
 
